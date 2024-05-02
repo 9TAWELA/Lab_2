@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      width: 400px;
+      margin: 0 auto;
+    }
+    .form-label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    .form-radio {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .form-radio input {
+      margin-right: 10px;
+    }
+    .form-checkbox {
+      display: flex;
+      align-items: center;
+    }
+    .form-checkbox input {
+      margin-right: 10px;
+    }
+    .form-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Registration Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="fullName" class="form-label">Full Name:</label>
+        <input type="text" class="form-input" id="fullName" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="emailAddress" class="form-label">Email Address:</label>
+        <input type="email" class="form-input" id="emailAddress" placeholder="Enter your email address" required>
+      </div>
+      <div class="form-group">
+        <label for="age" class="form-label">Age:</label>
+        <input type="number" class="form-input" id="age" value="18" min="18" max="99" required>
+      </div>
+      <div class="form-group">
+        <label for="gender" class="form-label">Gender:</label>
+        <div class="form-radio">
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" id="female" name="gender" value="female" required>
+          <label for="female">Female</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="country" class="form-label">Country of Residence:</label>
+        <select id="country" class="form-input" required>
+          <option value="" disabled selected>Select your country</option>
+          <option value="Sudan">Sudan</option>
+          <option value="Malaysia">Malaysia</option>
+          <option value="Egypt">Egypt</option>
+          <option value="saudi">saudi</option>
+          <option value="USA">USA</option>
+          <option value="brazil">brazil</option>
+          <option value="England">afganistan</option>
+          <option value="Afghanistan">Afghanistan</option>
+          <option value="Albania">Albania</option>
+          <option value="Algeria">Algeria</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="interests" class="form-label">Areas of Interest:</label>
+        <div class="form-checkbox">
+          <input type="checkbox" id="softwareDevelopment" name="interests" value="softwareDevelopment">
+          <label for="softwareDevelopment">Software Development</label>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" id="dataScience" name="interests" value="dataScience">
+          <label for="dataScience">Data Science</label>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" id="cybersecurity" name="interests" value="cybersecurity">
+          <label for="cybersecurity">Cybersecurity</label>
+        </div>
+        <div class="form-checkbox">
+          <input type="checkbox" id="artificialIntelligence" name="interests" value="artificialIntelligence">
+          <label for="artificialIntelligence">Artificial Intelligence</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Experience Level:</label>
+        <div class="form-radio">
+          <input type="radio" id="beginner" name="experienceLevel" value="beginner" required>
+          <label for="beginner">Beginner</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" id="intermediate" name="experienceLevel" value="intermediate" required>
+          <label for="intermediate">Intermediate</label>
+        </div>
+        <div class="form-radio">
+          <input type="radio" id="advanced" name="experienceLevel" value="advanced" required>
+          <label for="advanced">Advanced</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comments" class="form-label">Comments:</label>
+        <textarea id="comments" class="form-input" placeholder="Leave your comments here"></textarea>
+      </div>
+      <button type="submit" class="form-button">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
